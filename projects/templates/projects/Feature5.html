@@ -10,7 +10,7 @@
     <main>
       <div>
         <h1>My Projects</h1>
-        {% if project_list|length > 0 %} <--- i think this is wrong
+        {% for project in projects %}
         <table>
           <thead>
             <tr>
@@ -22,9 +22,9 @@
             <td>{{project.name}}</td>
             <td></td>
           </tr>
-          {% else %}
+          {% empty %}
           <p>You are not assigned to any projects</p>
-          {% endif %}
+          {% endfor %}
         </table>
       </div>
     </main>

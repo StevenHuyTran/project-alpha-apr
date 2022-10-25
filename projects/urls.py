@@ -1,7 +1,7 @@
 from django.urls import path
-from projects.views import list_projects
+from projects.views import projects_list
 
 
 urlpatterns = [
-    path("", list_projects, name="list_of_projects"),
+    path("", projects_list, name="projects_list"),
 ]
