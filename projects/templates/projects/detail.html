@@ -15,29 +15,30 @@
     </nav>
     <main>
       <div>
-        <h1>My Projects</h1>
-        {% if show_project|length == 0 %}
-        <p><a href="{% url 'create_project' %}">Create a new project</a></p>
-        <p>You are not assigned to any projects</p>
+        <h1>{{ show_project.name }}</h1>
+        <p>{{ show_project.description }}</p>
+        <h2>Tasks</h2>
+        {% if show_project.tasks.all|length == 0 %}
+        <p>This project has no tasks</p>
         {% else %}
         <table>
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Number of tasks</th>
-            </tr>
+            <th>Name</th>
+            <th>Assignee</th>
+            <th>Start date</th>
+            <th>Due date</th>
+            <th>Is completed</th>
           </thead>
           <tbody>
-            {% for project in show_project %}
+            {% for task in show_project.tasks.all %}
             <tr>
-              <td>
-                <a href="{% url 'show_project' project.id %}"
-                  >{{ project.name }}</a
-                >
-              </td>
-              <td>{{ project.tasks.all|length }}</td>
+              <td>{{ task.name }}</td>
+              <td>{{ task.assignee }}</td>
+              <td>{{ task.start_date }}</td>
+              <td>{{ task.due_date }}</td>
+              <td>{{ task.is_completed|yesno:"Yes,No" }}</td>
+              {% endfor %}
             </tr>
-            {% endfor %}
           </tbody>
         </table>
         {% endif %}
