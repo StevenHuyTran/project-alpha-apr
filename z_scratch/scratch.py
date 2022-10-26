@@ -1,14 +1,7 @@
-# {% extends 'base.html' %}
-# {% block content %}
-#     <main>
-#       <div>
-#         <h1>Create Receipt</h1>
-#         <form method="post">
-#           {% csrf_token %} {{ form.as_p }}
-#           <button>Create</button>
-#         </form>
-#       </div>
-#     </main>
-# {% endblock content %}
-#   </body>
-# </html>
+@login_required
+def category_list(request):
+    categories = ExpenseCategory.objects.filter(owner=request.user)
+    context = {
+        "categories": categories,
+    }
+    return render(request, "categories/list.html", context)
