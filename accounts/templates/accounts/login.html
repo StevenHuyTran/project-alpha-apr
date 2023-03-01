@@ -1,20 +1,58 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <title>Alpha Project</title>
   </head>
   <nav>
     <li><a href="{% url 'login' %}">Login</a></li>
     <li><a href="{% url 'signup' %}">Sign up</a></li>
   </nav>
-  <body>
+  <link rel="stylesheet" href="{% static "css/projects.css" %}">
+  <body class="body">
     <main>
-      <div>
+      <div class="white">
         <h1>Login</h1>
         <form method="post">
-          {% csrf_token %} {{ form.as_p }}
-          <button>Login</button>
+          {% csrf_token %} {{ form.as_p }}</div>
+          <button class="btn btn-success">Login</button>
         </form>
+      </div>
+      <!-- <div>    ##USE THIS FOR FLOATING FORM TEXT.
+        NEED TO SEE HOW TO APPLY TO DATABASE FORMS
+        <div class="form-floating">
+          <input type="" id="email" class="form-control"
+          placeholder="Place username here">
+          <label for="email" class="form-label">username</label>
+        </div>
+      </div> -->
+      <div class="container">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Open</button>
+        <div class="modal fade" id="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p>Hello</p>
+                <button class="btn-close" data-bs-dismiss="modal" data-bs-target="#modal"></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>

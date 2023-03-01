@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2019/06/spiderman-dark-illustration-4k_1560533458.jpg.webp");
+  height: 200px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* .table-background {
+  background-color: #1cd3ae;
+} */
+
+/* This is a single-line comment */
+.center {
+  text-align: center;
+  color: red;
+}
+
+main {
+  padding: 16px;
+  position: relative;
+}
+
+footer {
+  padding: 24px 24px;
+  background-color: #b4cf66;
+  text-align: start;
+}
+
+img {
+  height: 200px;
+}
+
+nav {
+  border-color: black;
+  border-bottom: 1px solid;
+  padding: 16px;
+  background-color: rgba(12, 16, 21, 0);
+}
+
+nav ul li a {
+  color: rgb(252, 253, 255);
+}
+
+.is-dark-green {
+  color: #146152;
+}
+
+.t h1 {
+  color: #146152;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+}
+
+h3 > a {
+  color: #44803f;
+  text-decoration: none;
+}
+
+/* tr:nth-child(even) {
+  background-color: lightgrey;
+} */
+
+.background {
+  position: relative;
+}
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: rgb(7, 7, 7);
+}
+
+.red {
+  color: #e71717fd;
+}
+
+.box {
+  background-color: lightblue;
+  border: 1px solid blue;
+  min-height: 50px;
+  font-size: 2rem;
+}
+
+table {
+  background-color: rgba(151, 43, 167, 0.966);
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+tr {
+  text-align: center;
+}
+
+input[name="username"] {
+  background-color: goldenrod;
+  border-radius: 5px;
+  background-image: url("https://img.icons8.com/external-anggara-basic-outline-anggara-putra/344/external-user-ui-basic-anggara-basic-outline-anggara-putra.png");
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 30px;
+}
+
+input[name="password"] {
+  background-color: goldenrod;
+  border-radius: 5px;
+  background-image: url("https://img.icons8.com/ios/512/key-security.png");
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 30px;
+}
+
+input[name="password_confirmation"] {
+  background-color: goldenrod;
+  border-radius: 5px;
+  background-image: url("https://img.icons8.com/ios/512/key-security.png");
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 30px;
+}
+
+/* input[type="text"] {
+  transition: width 12s ease-out;
+}
+
+Expands input fields but ease function doesnt seem to be working
+
+input[type="text"]:focus {
+  width: 100%;
+} */

@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-body">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit voluptatum
+    dolor, vitae unde totam illo, sed, vel accusamus natus deserunt provident
+    inventore! Repellendus iusto similique ipsum eius hic accusamus explicabo.
+  </div>
+</div>
+
+<div class="card card bg-dark"></div>
